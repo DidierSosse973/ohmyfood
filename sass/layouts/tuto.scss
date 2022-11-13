@@ -5,10 +5,15 @@
 
 .tuto{
     counter-reset: steps;
+    margin-bottom: 2rem;
+    h2 {
+        margin-left: 1rem;
+    }
     & ol{
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
+        margin-right: variables.$tuto-bullet-heihgt;
         @media (max-width: 1000px) {
             flex-direction: column;
         }
@@ -21,12 +26,15 @@
             color: white;
             background-color: colors.$purple;
             width: 2 * variables.$tuto-bullet-heihgt;
+
+            place-items: center;
             padding: 0.5rem;
             border-radius: 50%;
             position: absolute;
             left: -1 * variables.$tuto-bullet-heihgt;
-            bottom: variables.$tuto-bullet-heihgt;
+            top: 50%;
             text-align: center;
+            transform: translateY(-50%);
             
         }
         list-style-type: none;

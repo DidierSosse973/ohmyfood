@@ -1,10 +1,11 @@
 
 @use "../utils/box-shadow.scss";
+@use "../utils/colors.scss";
+
 .explorer {
     text-align: center;
     flex-direction: column;
     & h2 {
-    margin-top: 2rem;
     font-size: 2rem;
     }
     & p {
@@ -19,11 +20,49 @@
     border-radius: 2rem;
     background-image: linear-gradient(to top, #9356dc, #ff79da);
     transition: tranform 200ms;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     @include box-shadow.base-shadow;
     }
     & button:hover {
     transform: scale(1.02);
     opacity: 0.9;
+    }
+  }
+
+  .loader {
+    $animation-duration: 1s;
+    $animation-count: 3;
+    position: fixed;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    height: 100vh;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation: disappear 200ms $animation-duration * $animation-count forwards;
+    transform-origin: top;
+    &::after {
+      content: "";
+      height: 100px;
+      width: 100px;
+      border-right: 5px solid transparent;
+      border-top: 5px solid colors.$purple;
+      border-radius: 50%;
+      animation: spin $animation-duration ease-in-out;
+      animation-iteration-count: $animation-count;
+    }
+  }
+
+  @keyframes disappear {
+    to {
+      transform: scale(0);
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
     }
   }

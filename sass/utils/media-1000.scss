@@ -1,0 +1,5 @@
+@mixin querie_max_1000 {
+    @media (min-width: 1023px) {
+        gap: 2.5rem;
+    }   
+}

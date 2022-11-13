@@ -1,0 +1,91 @@
+@use "../utils/media-1000";
+@use "../utils/colors";
+
+#homepage {
+
+    .menus {
+        background-color: #f6f6f6;
+    h2 {
+        margin-left: 1rem;
+    }
+
+    .menus_cards {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding-bottom: 4rem;
+        @include media-1000.querie_max_1000;
+        .new {
+            position: relative;
+            border-radius: 1rem 1rem 1rem 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 0.5rem #fff;
+        }
+        .new::before {
+            content: "Nouveau";
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            background-color: colors.$color-tertiary;
+            color: darken(colors.$color-tertiary, 50%);
+            text-align: center;
+            padding: 0.5rem;
+            right: 1rem;
+            top: 1rem;
+        }
+        
+        .new_transparent {
+            position: relative;
+            border-radius: 1rem 1rem 1rem 1rem ;
+            background-color: #fff;
+            box-shadow: 0 0 0.5rem #fff;;
+        }
+        .new_transparent::before {
+            content: "Nouveau";
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            background-color: colors.$color-tertiary;
+            color: darken(colors.$color-tertiary, 50%);
+            text-align: center;
+            padding: 0.5rem;
+            right: 1rem;
+            top: 1rem;
+            visibility: hidden;    
+        }
+        i {
+            font-size: 2rem;
+            position: absolute;
+            right: 1rem;
+            top: 10.5rem;
+        }
+    }    
+}
+}
+
+    .card {
+        height: 4rem;
+        flex-grow: 1;
+        width: 20rem;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .fondCard {
+        height: 3rem;
+    }
+
+    .fa-solid {
+        color: transparent;
+        background-image: linear-gradient(to top, #9356dc, #ff79da);
+        -webkit-background-clip: text;
+        background-clip: text;
+        opacity: 0;
+        transition: all 300ms ease-in-out;  
+    }
+    .fa-solid:hover { 
+            opacity: 1;
+            transform: translateY(1%) scale(1);
+     }

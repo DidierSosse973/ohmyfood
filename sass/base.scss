@@ -5,6 +5,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
+
 }
 
 body {
@@ -13,5 +14,23 @@ body {
 }
 
 main {
-  padding: 0 1rem;
+  padding: 0;
 }
+.large {
+  font-size: large;
+}
+h2 {
+  margin: 3rem;
+  margin-bottom: 1.25rem;
+  padding-top: 2rem;
+  padding-left: 0.8rem;
+
+}
+h3,p {
+
+  margin: 0;
+  padding-left: 1rem;
+}
+
+
+
