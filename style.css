@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+a:link, a:visited, a:hover, a:active {
+  color: #000000;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -314,6 +319,7 @@ h5 {
 
 #page-restoPc header:hover::before {
   transform: translateY(-50%) scale(1.2);
+  text-decoration: none;
 }
 #page-restoPc header::before {
   display: inline-block;

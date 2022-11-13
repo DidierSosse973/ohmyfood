@@ -38,14 +38,15 @@ h5 {
 #page-restoPc{
     header {
         &:hover::before {
-            @include mixins.transform-zoom($zoom-level: 1.20, $transformation: translateY(-50%));
-            
+            @include mixins.transform-zoom($zoom-level: 1.20, $transformation: translateY(-50%));  
+            text-decoration: none; 
         }
         &::before {
             @include mixins.font-awesome;
             content: "\f060";
             padding-left: 2rem;
             transition: transform 200ms;
+
         }
     }     
     .banner img {
@@ -93,6 +94,7 @@ h5 {
                 background-color: #99e2d0;
             }
         }
+
 
             
             .menu-item {
