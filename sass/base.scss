@@ -14,7 +14,10 @@ a:link, a:visited,  a:hover, a:active
 }
 
 body {
-  margin: 0;
+  @media (max-width: 1000px){
+  margin: 0px auto;
+  }
+  
   font-family: "Roboto", sans-serif;
 }
 

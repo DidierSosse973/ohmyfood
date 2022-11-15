@@ -27,19 +27,35 @@
     left: 85%;
 }
 
+h4{
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 h5 {
     padding: 4rem;
     font-family: "Shrikhand", sans-serif;
     font-weight: 500;
+    font-size: large;
     margin: 0; 
     padding: 0.5rem;
 }
 
+p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 0.5rem;
+}
+
 #page-restoPc{
+   
     header {
         &:hover::before {
             @include mixins.transform-zoom($zoom-level: 1.20, $transformation: translateY(-50%));  
-            text-decoration: none; 
         }
         &::before {
             @include mixins.font-awesome;
@@ -67,18 +83,6 @@ h5 {
     .resto-main {
         padding: 0 1rem;
         background: #f6f6f6;
-    }
-    .menus {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-        @media (max-width: 1000px){
-            grid-template-columns: 1fr;
-        }
-        .category{
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         h3 {
             text-transform: uppercase;
             font-weight: 400;
@@ -94,25 +98,33 @@ h5 {
                 background-color: #99e2d0;
             }
         }
-
-
-            
+    }
+    .menus {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        @media (max-width: 1000px){
+            grid-template-columns: 1fr;
+        }
+        .category{
+            overflow: hidden;
+           
             .menu-item {
-                $numberofitems: 3;
-                @for $i from 1 through $numberofitems {
-                    &:nth-child(#{$i}) {
-                        animation-delay: 100ms * $i;
+             $numberofitems: 3;
+             @for $i from 1 through $numberofitems {
+                &:nth-child(#{$i}) {
+                    animation-delay: 250ms * $i; 
                     }
-                }
+                }   
                 display: flex;
                 background-color: white;
                 border-radius: 1rem;
                 overflow: hidden;
                 margin: 0.5rem;
                 box-shadow: 2px 1px 8px -3px #7e7e7e;
-                animation: appear 1s ;
+                animation: appear 1s;
                 animation-fill-mode: both;
-                
+                    
                 .menu-item__price {
                     margin-left: auto;
                     font-weight: 900;
@@ -123,12 +135,6 @@ h5 {
                 .menu-item__description{
                     padding: 1rem;
                     overflow: hidden;
-                    h4, 
-                    p{
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                    } 
                 }
                 .menu-item__check {
                     display: grid;
@@ -172,7 +178,8 @@ h5 {
             @include box-shadow.base-shadow;
         }
     }
-}
+
+} 
 
 
 

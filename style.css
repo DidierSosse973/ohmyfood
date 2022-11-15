@@ -12,8 +12,12 @@ a:link, a:visited, a:hover, a:active {
 }
 
 body {
-  margin: 0;
   font-family: "Roboto", sans-serif;
+}
+@media (max-width: 1000px) {
+  body {
+    margin: 0px auto;
+  }
 }
 
 main {
@@ -165,6 +169,10 @@ header {
 }
 .tuto li:hover {
   transform: scale(1.02);
+  background-color: #f3dced;
+}
+.tuto li:hover i::before {
+  color: #9356dc;
 }
 .tuto li i.fas {
   margin-right: 1rem;
@@ -266,6 +274,22 @@ footer {
   padding: 0 1.5rem;
   color: white;
 }
+footer a:link, footer a:visited, footer a:hover, footer a:active {
+  color: white;
+  text-decoration: none;
+}
+footer i {
+  padding-right: 0.5rem;
+}
+@media (min-width: 1000px) {
+  footer i {
+    visibility: hidden;
+  }
+}
+
+.div {
+  padding: 0.5rem;
+}
 
 h4 {
   font-family: "Shrikhand", sans-serif;
@@ -274,18 +298,12 @@ h4 {
   padding: 0.5rem;
 }
 
-.div {
-  padding: 0.2rem;
-}
-
 @keyframes appear {
   0% {
-    transform: translateY(50%);
-    opacity: 0;
+    transform: scale(0);
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: scale(1);
   }
 }
 .fa-solid {
@@ -309,17 +327,32 @@ h4 {
   left: 85%;
 }
 
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 h5 {
   padding: 4rem;
   font-family: "Shrikhand", sans-serif;
   font-weight: 500;
+  font-size: large;
   margin: 0;
   padding: 0.5rem;
 }
 
+p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 0.5rem;
+}
+
 #page-restoPc header:hover::before {
   transform: translateY(-50%) scale(1.2);
-  text-decoration: none;
 }
 #page-restoPc header::before {
   display: inline-block;
@@ -359,6 +392,21 @@ h5 {
   padding: 0 1rem;
   background: #f6f6f6;
 }
+#page-restoPc .resto-main h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 1rem;
+}
+#page-restoPc .resto-main h3::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  height: 0.2rem;
+  width: 3rem;
+  background-color: #99e2d0;
+}
 #page-restoPc .menus {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -371,23 +419,6 @@ h5 {
 }
 #page-restoPc .menus .category {
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-#page-restoPc .menus .category h3 {
-  text-transform: uppercase;
-  font-weight: 400;
-  position: relative;
-  margin-bottom: 1rem;
-}
-#page-restoPc .menus .category h3::after {
-  content: "";
-  position: absolute;
-  top: 1.5rem;
-  left: 1rem;
-  height: 0.2rem;
-  width: 3rem;
-  background-color: #99e2d0;
 }
 #page-restoPc .menus .category .menu-item {
   display: flex;
@@ -400,13 +431,13 @@ h5 {
   animation-fill-mode: both;
 }
 #page-restoPc .menus .category .menu-item:nth-child(1) {
-  animation-delay: 100ms;
+  animation-delay: 250ms;
 }
 #page-restoPc .menus .category .menu-item:nth-child(2) {
-  animation-delay: 200ms;
+  animation-delay: 500ms;
 }
 #page-restoPc .menus .category .menu-item:nth-child(3) {
-  animation-delay: 300ms;
+  animation-delay: 750ms;
 }
 #page-restoPc .menus .category .menu-item .menu-item__price {
   margin-left: auto;
@@ -418,12 +449,6 @@ h5 {
 #page-restoPc .menus .category .menu-item .menu-item__description {
   padding: 1rem;
   overflow: hidden;
-}
-#page-restoPc .menus .category .menu-item .menu-item__description h4,
-#page-restoPc .menus .category .menu-item .menu-item__description p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 #page-restoPc .menus .category .menu-item .menu-item__check {
   display: grid;

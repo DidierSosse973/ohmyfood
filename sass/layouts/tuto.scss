@@ -45,6 +45,10 @@
         @include box-shadow.base-shadow;
         &:hover {
         @include zoom.zoom;
+        background-color: #f3dced;
+        i::before{
+        color: colors.$purple ;
+        }
         }
         & i.fas {
             margin-right: 1rem;

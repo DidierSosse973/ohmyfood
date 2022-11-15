@@ -4,6 +4,20 @@ footer{
     background-color: colors.$darkgrey;
     padding: 0 1.5rem;
     color: white;
+    a:link, a:visited,  a:hover, a:active
+    {
+        color: white;
+        text-decoration: none;
+    }
+    i {
+        padding-right: 0.5rem;
+            @media (min-width: 1000px){
+            visibility: hidden;
+        }
+    }
+}
+.div {
+    padding: 0.5rem;
 }
 
 h4 {
@@ -11,8 +25,4 @@ h4 {
     font-weight: 500;
     margin: 0; 
     padding: 0.5rem;
-}
-
-.div {
-    padding: 0.2rem;
 }
