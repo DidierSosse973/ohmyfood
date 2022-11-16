@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DidierSosse973/ohmyfood.git"
+    "url": "git+https://github.com/DidierSosse973/DidierSosse.github.io.git"
   },
   "author": "Sosse Didier",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DidierSosse973/ohmyfood/issues"
+    "url": "https://github.com/DidierSosse973/DidierSosse973.github.io/issues"
   },
-  "homepage": "https://github.com/DidierSosse973/ohmyfood#readme",
+  "homepage": "https://github.com/DidierSosse973/DidierSosse973.github.iogit#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
