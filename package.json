@@ -4,24 +4,19 @@
   "description": "Mon projet openClassroom 3 ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch style.scss style.css",
-    "build": "postcss style.css -u autoprefixer cssnano -o ./build/style.min.css"
+    "sass": "sass --watch style.scss style.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DidierSosse973/DidierSosse.github.io.git"
+    "url": "git+https://github.com/DidierSosse973/ohmyfood.git"
   },
   "author": "Sosse Didier",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DidierSosse973/DidierSosse973.github.io/issues"
+    "url": "https://github.com/DidierSosse973/ohmyfood/issues"
   },
-  "homepage": "https://github.com/DidierSosse973/DidierSosse973.github.iogit#readme",
+  "homepage": "https://github.com/DidierSosse973/ohmyfood#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "cssnano": "^5.1.14",
-    "postcss": "^8.4.19",
-    "postcss-cli": "^10.0.0",
     "sass": "^1.55.0"
   }
 }
