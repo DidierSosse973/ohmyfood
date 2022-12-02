@@ -21,7 +21,7 @@ body {
 }
 
 main {
-  padding: 0;
+  margin: auto;
 }
 
 .large {
@@ -29,7 +29,6 @@ main {
 }
 
 h2 {
-  margin: 3rem;
   margin-bottom: 1.5rem;
   padding-top: 2rem;
   padding-left: 0.8rem;
@@ -40,8 +39,8 @@ h3 {
   margin: 0;
 }
 
-p {
-  padding-left: 2rem;
+.pI {
+  padding-left: 1rem;
   margin: 0;
 }
 
@@ -156,6 +155,7 @@ header {
   padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
+  font-weight: bold;
   box-shadow: 2px 1px 8px -3px black;
 }
 .tuto li::before {
@@ -359,7 +359,15 @@ p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
+  margin: 0;
+}
+
+.p {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #a09393;
 }
 
 #page-restoPc header:hover::before {
@@ -435,7 +443,7 @@ p {
   overflow: hidden;
 }
 #page-restoPc .menus .category .menu-item {
-  height: 80px;
+  height: 75px;
   display: flex;
   background-color: white;
   border-radius: 1rem;
@@ -457,13 +465,13 @@ p {
 #page-restoPc .menus .category .menu-item .menu-item__price {
   margin-left: auto;
   font-weight: 900;
-  padding: 0.6rem;
+  padding: 0.8rem;
   display: flex;
   align-items: flex-end;
 }
 #page-restoPc .menus .category .menu-item .menu-item__description {
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
   overflow: hidden;
 }
 #page-restoPc .menus .category .menu-item .menu-item__description h4 {
