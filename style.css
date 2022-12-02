@@ -30,14 +30,19 @@ main {
 
 h2 {
   margin: 3rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   padding-top: 2rem;
   padding-left: 0.8rem;
 }
 
-h3, p {
-  margin: 0;
+h3 {
   padding-left: 1rem;
+  margin: 0;
+}
+
+p {
+  padding-left: 2rem;
+  margin: 0;
 }
 
 header {
@@ -48,6 +53,7 @@ header {
   padding: 0.3rem;
   margin: 0;
   position: relative;
+  height: 10vh;
 }
 
 .city {
@@ -288,14 +294,15 @@ footer i {
 }
 
 .div {
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 
-h4 {
+.modif {
   font-family: "Shrikhand", sans-serif;
-  font-weight: 500;
+  font-weight: 550;
   margin: 0;
   padding: 0.5rem;
+  padding-top: 1rem;
 }
 
 @keyframes appear {
@@ -327,6 +334,10 @@ h4 {
   left: 85%;
 }
 
+h1 {
+  font-size: x-large;
+}
+
 h4 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -348,7 +359,7 @@ p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 
 #page-restoPc header:hover::before {
@@ -361,8 +372,8 @@ p {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: xx-large;
+  font-weight: bold;
+  font-size: large;
   position: absolute;
   left: 0;
   top: 50%;
@@ -373,12 +384,15 @@ p {
   padding-left: 2rem;
   transition: transform 200ms;
 }
+#page-restoPc header h1 {
+  margin-top: 1rem;
+  align-items: center;
+}
 #page-restoPc .banner img {
   display: block;
   width: 100%;
-  height: 60vh;
+  height: 30vh;
   object-fit: cover;
-  object-position: center bottom;
 }
 #page-restoPc .resto_title {
   margin-top: -2rem;
@@ -396,7 +410,7 @@ p {
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 #page-restoPc .resto-main h3::after {
   content: "";
@@ -421,6 +435,7 @@ p {
   overflow: hidden;
 }
 #page-restoPc .menus .category .menu-item {
+  height: 80px;
   display: flex;
   background-color: white;
   border-radius: 1rem;
@@ -442,13 +457,17 @@ p {
 #page-restoPc .menus .category .menu-item .menu-item__price {
   margin-left: auto;
   font-weight: 900;
-  padding: 1rem;
+  padding: 0.6rem;
   display: flex;
   align-items: flex-end;
 }
 #page-restoPc .menus .category .menu-item .menu-item__description {
+  justify-content: center;
   padding: 1rem;
   overflow: hidden;
+}
+#page-restoPc .menus .category .menu-item .menu-item__description h4 {
+  margin: 0.5rem;
 }
 #page-restoPc .menus .category .menu-item .menu-item__check {
   display: grid;
@@ -486,7 +505,7 @@ p {
   }
 }
 #page-restoPc div.order {
-  height: 70vh;
+  height: 20vh;
   display: grid;
   place-items: center;
 }
